@@ -1,25 +1,9 @@
 const webpack = require("webpack")
 const path = require("path")
 const settings = require("./settings")
+const prod = require("./webpack.production.config")
 module.exports = {
-    entry: path.resolve(__dirname, "../src/index.js"),
-    output: {
-        path: path.resolve(__dirname, `../public`),
-        filename: `${settings.bundleName}.js`
-    },
-    module: {
-        rules: [
-            {
-                loader: "babel-loader",
-                test: /\.js$/,
-                exclude: /node_modules/
-            },
-            {
-                test: /\.s?css$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
-            }
-        ]
-    },
+    ...prod,
     devServer: {
         contentBase: path.resolve(__dirname, `../public/`),
         port: 2000,
