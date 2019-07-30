@@ -3,7 +3,6 @@ import "./help.scss"
 export default function Help() {
     return (
         <div id="help">
-            <h3>React Webpack GoTo application help:</h3>
             <p> App root component in src/components/index.js</p>
             <h5>Commands: </h5>
             <ul>
