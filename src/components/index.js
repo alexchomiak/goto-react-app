@@ -7,7 +7,6 @@ export default function App() {
         <div>
             <h3>A simpler, lightweight, boilerplate React project</h3>
             <p> Created by Alex Chomiak </p>
-
             <a href="https://github.com/alexchomiak">https://github.com/alexchomiak</a>
         </div>
     )
@@ -15,7 +14,7 @@ export default function App() {
         <div>
             <img src={Logo} className="logo" />
             <div id="app">
-                <h2>React Webpack GoTo</h2>
+                <h2 className="title">React Webpack GoTo</h2>
 
                 <Router>
                     <NavLink exact className="nav-link" activeClassName="nav-link--active" to="/">
