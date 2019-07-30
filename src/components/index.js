@@ -14,7 +14,9 @@ export default function App() {
         <div>
             <img src={Logo} className="logo" />
             <div id="app">
-                <h2 className="title">React Webpack GoTo</h2>
+                <a className="title" href="https://github.com/alexchomiak/react-webpack-goto">
+                    React Webpack GoTo
+                </a>
 
                 <Router>
                     <NavLink exact className="nav-link" activeClassName="nav-link--active" to="/">
