@@ -14,8 +14,8 @@ export default function App() {
         <div>
             <img src={Logo} className="logo" />
             <div id="app">
-                <a className="title" href="https://github.com/alexchomiak/goto-react-webpack">
-                    GoTo React Webpack
+                <a className="title" href="https://github.com/alexchomiak/goto-react-app">
+                    GoTo React App
                 </a>
 
                 <Router>
