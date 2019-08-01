@@ -3,6 +3,7 @@ const path = require("path")
 const settings = require("./settings")
 const CopyPlugin = require("copy-webpack-plugin")
 module.exports = {
+    mode: "production",
     entry: path.resolve(__dirname, "../src/library.js"),
     output: {
         path: path.resolve(__dirname, `../${settings.bundleDirectory}`),
@@ -33,10 +34,7 @@ module.exports = {
                 use: [
                     "file-loader",
                     {
-                        loader: "image-webpack-loader",
-                        options: {
-                            disable: true // webpack@2.x and newer
-                        }
+                        loader: "image-webpack-loader"
                     }
                 ]
             }

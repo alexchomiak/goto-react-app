@@ -5,5 +5,7 @@ module.exports = {
     //library settings
     libraryDirectory: "lib",
     libraryFileName: "library",
-    libraryName: "Libary"
+    libraryName: "Libary",
+    includeReactInBundle: false,
+    includeReduxInBundle: false
 }

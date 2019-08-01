@@ -1,7 +1,27 @@
 const webpack = require("webpack")
 const path = require("path")
 const settings = require("./settings")
+
+//********  excludes libraries from bundle file, decreases file size
+let externals = {}
+if (settings.includeReactInBundle)
+    externals = {
+        ...externals,
+        react: "React",
+        "react-dom": "ReactDOM",
+        "react-router": "ReactRouter",
+        "react-redux": "ReactRedux"
+    }
+if (settings.includeReduxInBundle) {
+    externals = {
+        ...externals,
+        redux: "Redux"
+    }
+}
+// ********
+
 module.exports = {
+    mode: "production",
     entry: path.resolve(__dirname, "../src/library.js"),
     output: {
         path: path.resolve(__dirname, `../${settings.libraryDirectory}`),
@@ -10,6 +30,10 @@ module.exports = {
         libraryTarget: "umd",
         auxiliaryComment: "Alex Chomiak webpack configuration. https://github.com/alexchomiak"
     },
+    optimization: {
+        minimize: true
+    },
+    externals,
     module: {
         rules: [
             {
@@ -20,6 +44,18 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: ["style-loader", "css-loader", "sass-loader"]
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    "file-loader",
+                    {
+                        loader: "image-webpack-loader",
+                        options: {
+                            disable: true // webpack@2.x and newer
+                        }
+                    }
+                ]
             }
         ]
     }
