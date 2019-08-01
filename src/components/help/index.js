@@ -4,7 +4,7 @@ export default function Help() {
     return (
         <div id="help">
             <p> App root component in src/components/index.js</p>
-            <h5>Webpack Compile Settings in /config/settings.js</h5>
+            <p>Webpack Compile Settings in /config/settings.js</p>
             <h5>Commands: </h5>
             <ul>
                 <li>To start dev server: npm run start</li>
