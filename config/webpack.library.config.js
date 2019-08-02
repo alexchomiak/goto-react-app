@@ -1,6 +1,7 @@
 const webpack = require("webpack")
 const path = require("path")
 const settings = require("./settings")
+const modules = require("./module")
 
 //********  excludes libraries from bundle file, decreases file size
 let externals = {}
@@ -34,29 +35,5 @@ module.exports = {
         minimize: true
     },
     externals,
-    module: {
-        rules: [
-            {
-                loader: "babel-loader",
-                test: /\.js$/,
-                exclude: /node_modules/
-            },
-            {
-                test: /\.s?css$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
-            },
-            {
-                test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                    "file-loader",
-                    {
-                        loader: "image-webpack-loader",
-                        options: {
-                            disable: true // webpack@2.x and newer
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+    module: modules
 }

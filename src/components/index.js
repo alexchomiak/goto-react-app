@@ -2,7 +2,9 @@ import React from "react"
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
 import Help from "./help"
 import Logo from "./react.png"
+import "./App.scss"
 export default function App() {
+    // Info component for main route
     const Info = () => (
         <div>
             <h3>A simpler, lightweight, boilerplate React project</h3>
@@ -10,6 +12,7 @@ export default function App() {
             <a href="https://github.com/alexchomiak">https://github.com/alexchomiak</a>
         </div>
     )
+
     return (
         <div>
             <img src={Logo} className="logo" />

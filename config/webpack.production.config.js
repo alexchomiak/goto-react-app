@@ -2,6 +2,7 @@ const webpack = require("webpack")
 const path = require("path")
 const settings = require("./settings")
 const CopyPlugin = require("copy-webpack-plugin")
+const modules = require("./modules")
 module.exports = {
     mode: "production",
     entry: path.resolve(__dirname, "../src/library.js"),
@@ -18,26 +19,5 @@ module.exports = {
             }
         ])
     ],
-    module: {
-        rules: [
-            {
-                loader: "babel-loader",
-                test: /\.js$/,
-                exclude: /node_modules/
-            },
-            {
-                test: /\.s?css$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
-            },
-            {
-                test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                    "file-loader",
-                    {
-                        loader: "image-webpack-loader"
-                    }
-                ]
-            }
-        ]
-    }
+    module: modules
 }

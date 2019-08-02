@@ -1,66 +1,10 @@
+/* index css file (used for css resets and such) */
+html {
+    font-size: 62.5%; /* normalizes fontsize for REM, 1REM = 10px */
+}
+
 body {
-    color: #74b7ff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #393939;
-    font-family: "Trebuchet MS";
-    align-items: center;
-}
-
-.title {
-    font-size: 35px;
-    display: block;
-}
-
-#root {
-    width: 50%;
-}
-
-#app {
-    padding: 1rem;
-    border-radius: 15px;
-    text-align: center;
-}
-
-a,
-.nav-link {
-    color: #74b7ff;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 20px;
-}
-
-.nav-link--active {
-    color: #3681d2;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-a {
-    font-size: 15px;
-}
-
-.logo {
-    animation-name: logo;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    display: block;
-    width: 35%;
-    margin: 2rem auto;
-}
-
-@keyframes logo {
-    0% {
-        opacity: 0.35;
-        transform: rotate(0deg);
-    }
-    50% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 0.35;
-        transform: rotate(360deg);
-    }
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans";
+    background: rgb(36, 16, 34);
+    background: radial-gradient(circle, rgba(36, 16, 34, 1) 0%, rgba(48, 27, 50, 1) 100%);
 }

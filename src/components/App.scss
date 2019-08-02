@@ -1,0 +1,66 @@
+@import "src/styles/globals";
+body {
+    color: $primaryColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $backgroundColor;
+    font-family: "Trebuchet MS";
+    align-items: center;
+}
+
+.title {
+    font-size: 35px;
+    display: block;
+}
+
+#root {
+    width: 50%;
+}
+
+#app {
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+a {
+    font-size: 15px;
+}
+a,
+.nav-link {
+    color: $primaryColor;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.nav-link--active {
+    color: $secondaryColor;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.logo {
+    animation-name: logo;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: block;
+    width: 35%;
+    margin: 2rem auto;
+}
+
+@keyframes logo {
+    0% {
+        opacity: 0.35;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 0.35;
+        transform: rotate(360deg);
+    }
+}
