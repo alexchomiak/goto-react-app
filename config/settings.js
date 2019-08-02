@@ -9,6 +9,7 @@ module.exports = {
     libraryName: "Libary",
     includeReactInBundle: false,
     includeReduxInBundle: false,
+    apiProxyUrl: "https://localhost:4000",
     // Resolution paths, add paths here to avoid relative path hell!
     resolvePaths: {
         alias: {

@@ -11,6 +11,12 @@ module.exports = {
         hot: true,
         watchContentBase: true,
         compress: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        proxy: {
+            "/api": {
+                target: settings.apiProxyUrl,
+                secure: false
+            }
+        }
     }
 }
