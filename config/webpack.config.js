@@ -1,4 +1,3 @@
-const webpack = require("webpack")
 const path = require("path")
 const settings = require("./settings")
 const prod = require("./webpack.production.config")

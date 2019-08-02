@@ -1,23 +1,17 @@
-const webpack = require("webpack")
 const path = require("path")
 const settings = require("./settings")
-const modules = require("./module")
+const modules = require("./modules")
 
 //********  excludes libraries from bundle file, decreases file size
 let externals = {}
-if (settings.includeReactInBundle)
-    externals = {
-        ...externals,
-        react: "React",
-        "react-dom": "ReactDOM",
-        "react-router": "ReactRouter",
-        "react-redux": "ReactRedux"
-    }
+if (settings.includeReactInBundle) {
+    externals["react"] = "React"
+    externals["react-dom"] = "ReactDOM"
+    externals["react-router"] = "ReactRouter"
+    externals["react-redux"] = "react-redux"
+}
 if (settings.includeReduxInBundle) {
-    externals = {
-        ...externals,
-        redux: "Redux"
-    }
+    externals["redux"] = "Redux"
 }
 // ********
 module.exports = {
