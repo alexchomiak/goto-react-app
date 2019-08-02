@@ -4,6 +4,3 @@
     *   in lib file
 
 **/
-
-import app from "./components"
-export { app }
