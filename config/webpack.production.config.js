@@ -6,7 +6,7 @@ const modules = require("./modules")
 module.exports = {
     mode: "production",
     resolve: settings.resolvePaths,
-    entry: path.resolve(__dirname, "../src/library.js"),
+    entry: path.resolve(__dirname, "../src/index.js"),
     output: {
         path: path.resolve(__dirname, `../${settings.bundleDirectory}`),
         filename: `${settings.bundleName}.js`
