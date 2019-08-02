@@ -5,6 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin")
 const modules = require("./modules")
 module.exports = {
     mode: "production",
+    resolve: settings.resolvePaths,
     entry: path.resolve(__dirname, "../src/library.js"),
     output: {
         path: path.resolve(__dirname, `../${settings.bundleDirectory}`),

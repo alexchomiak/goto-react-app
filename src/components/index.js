@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
 import Help from "./help"
 import Logo from "./react.png"
 import "./App.scss"
+import Globals from "@utils/globals"
 export default function App() {
     // Info component for main route
     const Info = () => (
         <div>
-            <h3>A simpler, lightweight, boilerplate React project</h3>
-            <p> Created by Alex Chomiak </p>
-            <a href="https://github.com/alexchomiak">https://github.com/alexchomiak</a>
+            <h3>{Globals.APP_DESCRIPTION}</h3>
+            <p> Created by {Globals.APP_AUTHOR} </p>
+            <a href={Globals.APP_AUTHOR_GITHUB}>{Globals.APP_AUTHOR_GITHUB}</a>
         </div>
     )
 
@@ -17,8 +18,8 @@ export default function App() {
         <div>
             <img src={Logo} className="logo" />
             <div id="app">
-                <a className="title" href="https://github.com/alexchomiak/goto-react-app">
-                    GoTo React App
+                <a className="title" href={Globals.APP_REPO}>
+                    {Globals.APP_TITLE}
                 </a>
 
                 <Router>

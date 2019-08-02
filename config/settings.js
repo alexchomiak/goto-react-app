@@ -1,3 +1,4 @@
+const path = require("path")
 module.exports = {
     //build settings
     bundleName: "bundle",
@@ -7,5 +8,11 @@ module.exports = {
     libraryFileName: "library",
     libraryName: "Libary",
     includeReactInBundle: false,
-    includeReduxInBundle: false
+    includeReduxInBundle: false,
+    // Resolution paths, add paths here to avoid relative path hell!
+    resolvePaths: {
+        alias: {
+            "@utils": path.resolve(__dirname, "../src/utils")
+        }
+    }
 }

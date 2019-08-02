@@ -20,9 +20,9 @@ if (settings.includeReduxInBundle) {
     }
 }
 // ********
-
 module.exports = {
     mode: "production",
+    resolve: settings.resolvePaths,
     entry: path.resolve(__dirname, "../src/library.js"),
     output: {
         path: path.resolve(__dirname, `../${settings.libraryDirectory}`),
