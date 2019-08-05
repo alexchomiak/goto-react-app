@@ -1,7 +1,8 @@
 const path = require("path")
 const settings = require("./settings")
 const modules = require("./modules")
-
+const webpack = require("webpack")
+const env = require("./environment")
 //********  excludes libraries from bundle file, decreases file size
 let externals = {}
 if (settings.includeReactInBundle) {
@@ -14,6 +15,7 @@ if (settings.includeReduxInBundle) {
     externals["redux"] = "Redux"
 }
 // ********
+
 module.exports = {
     mode: "production",
     resolve: settings.resolvePaths,
@@ -29,5 +31,6 @@ module.exports = {
         minimize: true
     },
     externals,
-    module: modules
+    module: modules,
+    plugins: [new webpack.DefinePlugin(env)]
 }
