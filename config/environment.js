@@ -7,5 +7,5 @@ const ENV_VARS = {
 for (var key in ENV_VARS) {
     ENV_VARS[key] = JSON.stringify(ENV_VARS[key]) // stringify all values
 }
-console.log(ENV_VARS)
+
 module.exports = ENV_VARS
