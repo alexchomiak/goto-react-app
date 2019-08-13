@@ -8,7 +8,7 @@ const env = require("./environment")
 module.exports = {
     mode: "production",
     resolve: settings.resolvePaths,
-    entry: path.resolve(__dirname, "../src/index.js"),
+    entry: ["@babel/polyfill", path.resolve(__dirname, "../src/index.js")],
     output: {
         path: path.resolve(__dirname, `../${settings.bundleDirectory}`),
         filename: `${settings.bundleName}.js`
