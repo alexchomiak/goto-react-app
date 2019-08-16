@@ -34,7 +34,7 @@
         "test": "cat src/index.js",
         "build": "webpack --config ./config/webpack.production.config.js",
         "buildlib": "webpack --config ./config/webpack.library.config.js",
-        "start": "webpack-dashboard -m -- webpack-dev-server src --inline --config ./config/webpack.config.js --open"
+        "start": "webpack-dashboard -m -t 'GoTo React App' -- webpack-dev-server src --inline --config ./config/webpack.config.js --open"
     },
     "author": "",
     "license": "ISC"
