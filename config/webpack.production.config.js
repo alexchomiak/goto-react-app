@@ -4,7 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin")
 const modules = require("./modules")
 const webpack = require("webpack")
 const env = require("./environment")
-
+var DashboardPlugin = require("webpack-dashboard/plugin")
 module.exports = {
     mode: "production",
     resolve: settings.resolvePaths,
@@ -21,7 +21,8 @@ module.exports = {
                 ignore: ["*.js"]
             }
         ]),
-        new webpack.DefinePlugin(env)
+        new webpack.DefinePlugin(env),
+        new DashboardPlugin()
     ],
     module: modules
 }

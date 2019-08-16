@@ -27,13 +27,14 @@
         "style-loader": "^0.23.1",
         "webpack": "^4.38.0",
         "webpack-cli": "^3.3.6",
+        "webpack-dashboard": "^3.0.7",
         "webpack-dev-server": "^3.7.2"
     },
     "scripts": {
         "test": "cat src/index.js",
         "build": "webpack --config ./config/webpack.production.config.js",
         "buildlib": "webpack --config ./config/webpack.library.config.js",
-        "start": " webpack-dev-server src --inline --config ./config/webpack.config.js --open"
+        "start": "webpack-dashboard -m -- webpack-dev-server src --inline --config ./config/webpack.config.js --open"
     },
     "author": "",
     "license": "ISC"
