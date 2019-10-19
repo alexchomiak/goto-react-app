@@ -5,13 +5,13 @@ const webpack = require("webpack")
 const env = require("./environment")
 //********  excludes libraries from bundle file, decreases file size
 let externals = {}
-if (settings.includeReactInBundle) {
+if (!settings.includeReactInBundle) {
     externals["react"] = "React"
     externals["react-dom"] = "ReactDOM"
     externals["react-router"] = "ReactRouter"
     externals["react-redux"] = "react-redux"
 }
-if (settings.includeReduxInBundle) {
+if (!settings.includeReduxInBundle) {
     externals["redux"] = "Redux"
 }
 // ********
@@ -19,7 +19,7 @@ if (settings.includeReduxInBundle) {
 module.exports = {
     mode: "production",
     resolve: settings.resolvePaths,
-    entry: ["@babel/polyfill", path.resolve(__dirname, "../src/index.js")],
+    entry: ["@babel/polyfill", path.resolve(__dirname, "../src/library.js")],
     output: {
         path: path.resolve(__dirname, `../${settings.libraryDirectory}`),
         filename: `${settings.libraryFileName}.js`,
