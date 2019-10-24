@@ -23,7 +23,7 @@ module.exports = new webpack.BannerPlugin(
         "----------------------------------------------------------------------------------------------",
         "",
         "                          GoTo React App Bundle File",
-        `            Compiled at ${new Date().toLocaleString()}, on a ${os.type()} machine`,
+        `            Compiled on ${new Date().toLocaleString()}, on a ${os.type()} machine`,
         "",
         "**********************************************************************************************",
         "React Application Built Using GoTo React App 2019",
