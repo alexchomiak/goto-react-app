@@ -26,7 +26,7 @@ module.exports = new webpack.BannerPlugin(
         `            Compiled on ${new Date().toLocaleString()}, on a ${os.type()} machine`,
         "",
         "**********************************************************************************************",
-        "React Application Built Using GoTo React App 2019",
+        `React Application Built Using GoTo React App (c)${new Date().getFullYear()}`,
         "GoTo React App is a boiler plate React Utility built by Alex Chomiak.",
         "It beginner friendly and more robust than create-react-app,",
         "the repo can be found at https://github.com/alexchomiak/goto-react-app.",
