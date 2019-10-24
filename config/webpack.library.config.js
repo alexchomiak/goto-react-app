@@ -3,6 +3,7 @@ const settings = require("./settings")
 const modules = require("./modules")
 const webpack = require("webpack")
 const env = require("./environment")
+const banner = require("./banner")
 //********  excludes libraries from bundle file, decreases file size
 let externals = {}
 if (!settings.includeReactInBundle) {
@@ -32,5 +33,5 @@ module.exports = {
     },
     externals,
     module: modules,
-    plugins: [new webpack.DefinePlugin(env)]
+    plugins: [new webpack.DefinePlugin(env), banner]
 }
