@@ -40,8 +40,8 @@ module.exports = new webpack.BannerPlugin(
         "                   And to get started with a boiler plate project run:",
         "                   ****  goto-react-app <project-name>",
         "",
-        "                   to get started with your own boilerplate react application right away!",
         "                   Happy coding! :)",
+        "                   *** ( Full Guide is on the Repo ) ***",
         "",
         "Also for the wandering eye, follow me on github @ https://github.com/alexchomiak/",
         "**********************************************************************************************"
