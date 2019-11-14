@@ -1,6 +1,18 @@
-@import "src/styles/globals";
+/*
+ * File: /src/components/help/help.scss
+ * File Created: Friday, 16th August 2019 9:13:53 pm
+ * Author: Alex Chomiak 
+ * 
+ * Last Modified: Wednesday, 13th November 2019 7:44:13 pm
+ * Modified By: Alex Chomiak 
+ * 
+ * Author Github: https://github.com/alexchomiak
+ */
+
+
+@import 'src/styles/globals';
 #help {
-    text-align: left;
-    margin: 1rem auto;
-    width: 50%;
+  text-align: left;
+  margin: 1rem auto;
+  width: 50%;
 }

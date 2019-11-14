@@ -1,37 +1,48 @@
-const path = require("path")
-const settings = require("./settings")
-const modules = require("./modules")
-const webpack = require("webpack")
-const env = require("./environment")
-const banner = require("./banner")
+/*
+ * File: /config/webpack.library.config.js
+ * File Created: Monday, 29th July 2019 4:50:50 pm
+ * Author: Alex Chomiak
+ *
+ * Last Modified: Wednesday, 13th November 2019 7:26:42 pm
+ * Modified By: Alex Chomiak 
+ *
+ * Author Github: https://github.com/alexchomiak
+ */
+
+const path = require('path')
+const settings = require('./settings')
+const modules = require('./modules')
+const webpack = require('webpack')
+const env = require('./environment')
+const banner = require('./banner')
 //********  excludes libraries from bundle file, decreases file size
 let externals = {}
 if (!settings.includeReactInBundle) {
-    externals["react"] = "React"
-    externals["react-dom"] = "ReactDOM"
-    externals["react-router"] = "ReactRouter"
-    externals["react-redux"] = "react-redux"
+  externals['react'] = 'React'
+  externals['react-dom'] = 'ReactDOM'
+  externals['react-router'] = 'ReactRouter'
+  externals['react-redux'] = 'react-redux'
 }
 if (!settings.includeReduxInBundle) {
-    externals["redux"] = "Redux"
+  externals['redux'] = 'Redux'
 }
 // ********
 
 module.exports = {
-    mode: "production",
-    resolve: settings.resolvePaths,
-    entry: ["@babel/polyfill", path.resolve(__dirname, "../src/library.js")],
-    output: {
-        path: path.resolve(__dirname, `../${settings.libraryDirectory}`),
-        filename: `${settings.libraryFileName}.js`,
-        library: settings.libraryName,
-        libraryTarget: "umd",
-        auxiliaryComment: "Alex Chomiak webpack configuration. https://github.com/alexchomiak"
-    },
-    optimization: {
-        minimize: true
-    },
-    externals,
-    module: modules,
-    plugins: [new webpack.DefinePlugin(env), banner]
+  mode: 'production',
+  resolve: settings.resolvePaths,
+  entry: ['@babel/polyfill', path.resolve(__dirname, '../src/library.js')],
+  output: {
+    path: path.resolve(__dirname, `../${settings.libraryDirectory}`),
+    filename: `${settings.libraryFileName}.js`,
+    library: settings.libraryName,
+    libraryTarget: 'umd',
+    auxiliaryComment: 'Alex Chomiak webpack configuration. https://github.com/alexchomiak',
+  },
+  optimization: {
+    minimize: true,
+  },
+  externals,
+  module: modules,
+  plugins: [new webpack.DefinePlugin(env), banner],
 }

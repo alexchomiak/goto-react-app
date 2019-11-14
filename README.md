@@ -28,3 +28,9 @@ npm run build
 # compile library
 npm run buildlib
 ```
+
+## Goals
+
+- Next.js Integration (Server-side rendering)
+- Optional TypeScript flag
+- Boilerplate Realtime Fullstack Application (Separate Repo)

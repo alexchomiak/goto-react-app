@@ -1,87 +1,98 @@
-@import "src/styles/globals";
+/*
+ * File: /src/components/App.scss
+ * File Created: Friday, 16th August 2019 9:13:53 pm
+ * Author: Alex Chomiak 
+ * 
+ * Last Modified: Wednesday, 13th November 2019 7:24:28 pm
+ * Modified By: Alex Chomiak 
+ * 
+ * Author Github: https://github.com/alexchomiak
+ */
+
+@import 'src/styles/globals';
 
 p,
 li {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 h4 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 h3 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 @font-face {
-    font-family: "Nunito";
-    src: url("/Nunito.ttf");
+  font-family: 'Nunito';
+  src: url('/Nunito.ttf');
 }
 html {
-    font-size: 62.5%; /* normalizes fontsize for REM, 1REM = 10px */
+  font-size: 62.5%; /* normalizes fontsize for REM, 1REM = 10px */
 }
 
 body {
-    color: $primaryColor;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: $backgroundColor;
-    align-items: center;
-    font-family: "Nunito";
+  color: $primaryColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $backgroundColor;
+  align-items: center;
+  font-family: 'Nunito';
 }
 
 .title {
-    font-size: 3.5rem;
-    display: block;
+  font-size: 3.5rem;
+  display: block;
 }
 
 #root {
-    width: 50%;
+  width: 50%;
 }
 
 #app {
-    padding: 1rem;
-    border-radius: 15px;
-    text-align: center;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
 }
 
 a,
 .nav-link {
-    color: $primaryColor;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 2rem;
+  color: $primaryColor;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 2rem;
 }
 a {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .nav-link--active {
-    color: $secondaryColor;
-    font-weight: 600;
-    text-decoration: underline;
+  color: $secondaryColor;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .logo {
-    animation-name: logo;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    display: block;
-    width: 35%;
-    margin: 2rem auto;
+  animation-name: logo;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: block;
+  width: 35%;
+  margin: 2rem auto;
 }
 
 @keyframes logo {
-    0% {
-        opacity: 0.35;
-        transform: rotate(0deg);
-    }
-    50% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 0.35;
-        transform: rotate(360deg);
-    }
+  0% {
+    opacity: 0.35;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0.35;
+    transform: rotate(360deg);
+  }
 }
